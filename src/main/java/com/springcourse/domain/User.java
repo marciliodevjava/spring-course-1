@@ -47,6 +47,6 @@ public class User implements Serializable{
 	@OneToMany(mappedBy = "owner")
 	private List<Request> request = new ArrayList<Request>();
 	@OneToMany(mappedBy = "owner")
-	private List<RequestState> requestState = new ArrayList<RequestState>();
+	private List<RequestStage> requestStage = new ArrayList<RequestStage>();
 
 }
