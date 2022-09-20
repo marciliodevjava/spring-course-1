@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.springcourse.domain.enums.RequestStateEnum;
+import com.springcourse.domain.enums.RequestStageEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -49,12 +49,12 @@ public class Request implements Serializable{
 	private Date criationDate;
 	@Column(length = 12, nullable = false)
 	@Enumerated(EnumType.STRING)
-	private RequestStateEnum state;
+	private RequestStageEnum state;
 	@ManyToOne
 	@JoinColumn(name = "owner_id", nullable = false)
 	private User owner;
 	@OneToMany(mappedBy = "request")
-	private List<RequestState> requestStage = new ArrayList<RequestState>();
+	private List<RequestStage> requestStage = new ArrayList<RequestStage>();
 	
 	
 }
