@@ -49,6 +49,6 @@ public class RequestState implements Serializable{
 	@JoinColumn(name = "request_id", nullable = false)
 	private Request request;
 	@ManyToOne
-	@JoinColumn(name = "user_id", nullable = false)
-	private User user;
+	@JoinColumn(name = "owner_id", nullable = false)
+	private User owner;
 }
