@@ -12,7 +12,7 @@ import com.springcourse.domain.enums.RequestStageEnum;
 @Repository
 public interface RequestRepository extends JpaRepository<Request, Long> {
 
-	public List<Request> findAllOwnerId(Long id); // Retorna a lista de pedidos de um usuário
+	public List<Request> findAllByOwnerId(Long id); // Retorna a lista de pedidos de um usuário
 	@Query("UPDATE request SET state = ?2 WHERE id = ?1")
 	public Request updateStatus(Long id, RequestStageEnum state);
 }
