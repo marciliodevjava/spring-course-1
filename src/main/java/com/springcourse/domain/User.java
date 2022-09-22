@@ -23,21 +23,21 @@ import lombok.Setter;
 @Setter // - Métodos Set
 @Getter // - Métodos Get
 @AllArgsConstructor // - Construtor com todos os argumentos
-@NoArgsConstructor  // - Construtor com nenhum argumento
+@NoArgsConstructor // - Construtor com nenhum argumento
 @Entity(name = "user") // Entidade que vai ser mapeada
-public class User implements Serializable{
+public class User implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Geração automatica de id
 	private Long id;
 	@Column(length = 75, nullable = false)
 	private String name;
-	@Column(length = 75, nullable = false,unique = true)
+	@Column(length = 75, nullable = false, unique = true)
 	private String email;
 	@Column(length = 100, nullable = false)
 	private String password;
